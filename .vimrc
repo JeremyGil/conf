@@ -17,15 +17,14 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
-Plugin 'scrooloose/syntastic'
-Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'kchmck/vim-coffee-script'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
-filetype plugin on    " required
+" filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
-"filetype plugin on
+filetype plugin on
 "
 " Brief help
 " :PluginList          - list configured plugins
@@ -38,10 +37,11 @@ filetype plugin on    " required
 colo molokai
 set enc=UTF-8
 let $LANG='en'
-set list listchars=tab:>-,eol:¶
-set guifont=Meslo_LG_M_for_Powerline:h10
+set listchars=tab:>-,eol:¶
+set guifont=Meslo_LG_M_for_Powerline:h8
+set guioptions-=m guioptions-=T
 set nu
-set shiftwidth=2
+set shiftwidth=0
 set tabstop=4
 set mouse=a
 syntax on
@@ -55,8 +55,5 @@ let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#syntastic#enabled=1
 let g:airline#extensions#whitespace#enabled=1
-
-let g:SuperTabMappingForward = '<c-space>'
-let g:SuperTabMappingBackward = '<s-c-space>'
 
 map <Leader> <Plug>(easymotion-prefix)
