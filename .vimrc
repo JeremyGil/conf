@@ -39,8 +39,9 @@ filetype plugin on
 colo molokai
 set enc=UTF-8
 let $LANG='en'
-set listchars=tab:»‐,eol:¶
-set guifont=Meslo_LG_M_for_Powerline:h8
+set listchars=tab:»─,eol:¶
+set guifont=Sauce_Code_Powerline:h8
+"set guifont=Meslo_LG_M_for_Powerline:h8
 set guioptions-=m guioptions-=T
 set nu
 set shiftwidth=0
