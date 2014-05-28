@@ -13,12 +13,14 @@ Plugin 'gmarik/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -37,7 +39,7 @@ filetype plugin on
 colo molokai
 set enc=UTF-8
 let $LANG='en'
-set listchars=tab:>-,eol:¶
+set listchars=tab:»‐,eol:¶
 set guifont=Meslo_LG_M_for_Powerline:h8
 set guioptions-=m guioptions-=T
 set nu
