@@ -19,6 +19,7 @@ Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'derekwyatt/vim-scala'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 
@@ -39,14 +40,17 @@ filetype plugin on
 colo molokai
 set enc=UTF-8
 let $LANG='en'
-set listchars=tab:»─,eol:¶
-set guifont=Sauce_Code_Powerline:h8
-"set guifont=Meslo_LG_M_for_Powerline:h8
+
+set guifont=Literation_Mono_Powerline:h12
 set guioptions-=m guioptions-=T
-set nu
-set shiftwidth=0
-set tabstop=4
 set mouse=a
+
+set number
+set tabstop=4
+
+set list
+set listchars=tab:»─,eol:¶
+
 syntax on
 set laststatus=2
 
