@@ -17,7 +17,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kchmck/vim-coffee-script'
@@ -46,7 +45,8 @@ set guioptions-=m guioptions-=T
 set mouse=a
 
 set number
-set tabstop=4
+set tabstop=2
+set expandtab
 
 set list
 set listchars=tab:»─,eol:¶
@@ -58,9 +58,7 @@ let mapleader=','
 
 let g:nerdtree_tabs_open_on_console_startup=1
 
-let g:airline_powerline_fonts=1
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#syntastic#enabled=1
-let g:airline#extensions#whitespace#enabled=1
-
 map <Leader> <Plug>(easymotion-prefix)
+
+" powerline
+set rtp+=$PIP_REPO/powerline/bindings/vim
