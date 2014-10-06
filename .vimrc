@@ -12,13 +12,17 @@ Plugin 'gmarik/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
+Plugin 'bufkill.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'Shougo/neocomplete.vim'
+Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'derekwyatt/vim-scala'
+Plugin 'tfnico/vim-gradle'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 
@@ -49,16 +53,21 @@ set tabstop=2
 set expandtab
 
 set list
-set listchars=tab:»─,eol:¶
+set listchars=tab:__,eol:¶
 
 syntax on
 set laststatus=2
 
 let mapleader=','
 
+" powerline
+set rtp+=$PIP_REPO/powerline/bindings/vim
+
 let g:nerdtree_tabs_open_on_console_startup=1
+
+let g:neocomplete#enable_at_startup = 1
 
 map <Leader> <Plug>(easymotion-prefix)
 
-" powerline
-set rtp+=$PIP_REPO/powerline/bindings/vim
+" tagbar
+nmap <F8> :TagbarToggle<CR>
