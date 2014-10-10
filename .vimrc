@@ -17,6 +17,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
@@ -67,7 +68,13 @@ let g:nerdtree_tabs_open_on_console_startup=1
 
 let g:neocomplete#enable_at_startup = 1
 
+let g:ctrlp_map = '<c-p>'
+set wildignore+=*.class
+
 map <Leader> <Plug>(easymotion-prefix)
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" md to markdown
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
