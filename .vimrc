@@ -64,7 +64,8 @@ let mapleader=','
 " powerline
 set rtp+=$PIP_REPO/powerline/bindings/vim
 
-let g:nerdtree_tabs_open_on_console_startup=1
+let g:nerdtree_tabs_open_on_console_startup=0
+map <F7> :NERDTreeToggle<CR>
 
 let g:neocomplete#enable_at_startup = 1
 
@@ -75,6 +76,35 @@ map <Leader> <Plug>(easymotion-prefix)
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
+
+" tagbar-coffee
+let g:tagbar_type_coffee = {
+    \ 'ctagstype' : 'coffee',
+    \ 'kinds'     : [
+        \ 'c:classes',
+        \ 'm:methods',
+        \ 'f:functions',
+        \ 'v:variables',
+        \ 'f:fields',
+    \ ]
+\ }
+
+" tagbar-scala
+let g:tagbar_type_scala = {
+    \ 'ctagstype' : 'Scala',
+    \ 'kinds'     : [
+        \ 'p:packages:1',
+        \ 'V:values',
+        \ 'v:variables',
+        \ 'T:types',
+        \ 't:traits',
+        \ 'o:objects',
+        \ 'a:aclasses',
+        \ 'c:classes',
+        \ 'r:cclasses',
+        \ 'm:methods'
+    \ ]
+\ }
 
 " md to markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
