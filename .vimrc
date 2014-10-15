@@ -72,7 +72,7 @@ let g:neocomplete#enable_at_startup = 1
 let g:ctrlp_map = '<c-p>'
 set wildignore+=*.class
 
-map <Leader> <Plug>(easymotion-prefix)
+map <Space> <Plug>(easymotion-prefix)
 
 " tagbar
 nmap <F8> :TagbarToggle<CR>
