@@ -56,6 +56,9 @@ set expandtab
 set list
 set listchars=tab:__,eol:¶
 
+set hlsearch
+set incsearch
+
 syntax on
 set laststatus=2
 
