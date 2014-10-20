@@ -22,7 +22,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'drmingdrmer/xptemplate'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'tfnico/vim-gradle'
 Plugin 'kchmck/vim-coffee-script'
@@ -79,7 +81,7 @@ set wildignore+=*.class
 
 map <Space> <Plug>(easymotion-prefix)
 
-set updatetime=50
+set updatetime=200
 
 " tagbar
 autocmd VimEnter * nested :call tagbar#autoopen(1)
