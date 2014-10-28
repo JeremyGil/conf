@@ -83,7 +83,6 @@ map <F7> :NERDTreeToggle<CR>
 
 let g:neocomplete#enable_at_startup = 1
 
-let g:ctrlp_map = '<c-p>'
 set wildignore+=*.class
 
 map <Space> <Plug>(easymotion-prefix)
@@ -91,8 +90,6 @@ map <Space> <Plug>(easymotion-prefix)
 set updatetime=200
 
 " tagbar
-autocmd VimEnter * nested :call tagbar#autoopen(1)
-autocmd FileType * nested :call tagbar#autoopen(0)
 let g:tagbar_autoshowtag=1
 nmap <F8> :TagbarToggle<CR>
 
