@@ -15,14 +15,16 @@
 			},
 			{
 				"function": "powerline.segments.common.time.date",
-				"name": "time",
+				"args": {
+					"format": "%B %d (%a)"
+				}
+			},
+			{
+				"function": "powerline.segments.common.time.date",
 				"args": {
 					"format": "%H:%M",
 					"istime": true
 				}
-			},
-			{
-				"function": "powerline.segments.common.time.date"
 			},
 			{
 				"function": "powerline.segments.common.wthr.weather",
