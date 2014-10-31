@@ -10,10 +10,7 @@
 				"priority": 50
 			},
 			{
-				"function": "powerline.segments.common.bat.battery",
-				"args": {
-					"gamify": true
-				}
+				"function": "powerline.segments.common.bat.battery"
 			},
 			{
 				"function": "powerline.segments.common.time.date",
