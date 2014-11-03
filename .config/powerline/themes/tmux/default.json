@@ -30,7 +30,7 @@
 				"priority": 50,
 				"name": "weather",
 				"args": {
-					"location_query": "seoul. korea"
+					"location_query": "seoul, korea"
 				}
 			}
 		]
