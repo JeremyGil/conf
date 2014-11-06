@@ -52,7 +52,7 @@ filetype plugin on
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 colo molokai
-set enc=UTF-8
+set enc=utf-8
 let $LANG='en'
 
 set guifont=Literation_Mono_Powerline:h12
@@ -65,7 +65,7 @@ set expandtab
 set autoindent
 
 set list
-set listchars=tab:__,eol:¶
+set listchars=tab:__,trail:-
 
 set hlsearch
 set incsearch
@@ -78,18 +78,30 @@ let mapleader=','
 " powerline
 set rtp+=$PIP_REPO/powerline/bindings/vim
 
+" fugitive
+nmap <F9> :Gstatus<CR>
+
+" NERDTree
 let g:nerdtree_tabs_open_on_console_startup=0
-map <F7> :NERDTreeToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
 
 let g:neocomplete#enable_at_startup = 1
 
+" eclim
+let g:EclimCompletionMethod = 'omnifunc'
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.java = '\%(\h\w*\|)\)\.\w*'
+
+" ctrlp
 set wildignore+=*.class
 
+" easymotion
 map <Space> <Plug>(easymotion-prefix)
 
-set updatetime=200
-
 " tagbar
+set updatetime=200
 let g:tagbar_autoshowtag=1
 nmap <F8> :TagbarToggle<CR>
 
