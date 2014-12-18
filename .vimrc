@@ -23,11 +23,14 @@ Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-sexp-mappings-for-regular-people'
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-leiningen'
+Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'amdt/vim-niji'
@@ -74,6 +77,7 @@ syntax on
 set laststatus=2
 
 let mapleader=','
+let maplocalleader=','
 
 " powerline
 set rtp+=$PIP_REPO/powerline/bindings/vim
