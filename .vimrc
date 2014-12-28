@@ -22,6 +22,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tomasr/molokai'
 Plugin 'Lokaltog/vim-easymotion'
+Plugin 'mhinz/vim-signify'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people'
 Plugin 'tpope/vim-repeat'
@@ -34,9 +35,9 @@ Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'amdt/vim-niji'
-Plugin 'drmingdrmer/xptemplate'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'tfnico/vim-gradle'
+Plugin 'tristen/vim-sparkup'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 
@@ -64,6 +65,7 @@ set mouse=a
 
 set number
 set tabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 
@@ -173,3 +175,7 @@ let g:tagbar_type_scala = {
 
 " md to markdown
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" sparkup
+let g:sparkupNextMapping='<C-l>'
+let g:sparkupDoubleQuote=1
