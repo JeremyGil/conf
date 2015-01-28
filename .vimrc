@@ -59,9 +59,8 @@ colo molokai
 set enc=utf-8
 let $LANG='en'
 
-set guifont=Literation_Mono_Powerline:h12
+set guifont=InputMono:h12
 set guioptions-=m guioptions-=T
-set mouse=a
 
 set number
 set tabstop=2
