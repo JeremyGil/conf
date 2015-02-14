@@ -69,7 +69,7 @@ set expandtab
 set autoindent
 
 set list
-set listchars=tab:__,trail:-
+set listchars=tab:»\ ,trail:-
 
 set hlsearch
 set incsearch
