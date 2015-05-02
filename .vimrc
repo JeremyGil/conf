@@ -16,6 +16,7 @@ Plugin 'bufkill.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'kien/ctrlp.vim'
@@ -178,3 +179,5 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " sparkup
 let g:sparkupNextMapping='<C-l>'
 let g:sparkupDoubleQuote=1
+
+" vi: se ts=4 sw=4:
