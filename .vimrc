@@ -173,9 +173,6 @@ let g:tagbar_type_scala = {
     \ ]
 \ }
 
-" md to markdown
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
 " sparkup
 let g:sparkupNextMapping='<C-l>'
 let g:sparkupDoubleQuote=1
