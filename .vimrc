@@ -39,6 +39,7 @@ Plugin 'vim-niji'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'tfnico/vim-gradle'
 Plugin 'tristen/vim-sparkup'
+Plugin 'othree/yajs.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 
