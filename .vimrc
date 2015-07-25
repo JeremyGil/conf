@@ -36,11 +36,9 @@ Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'vim-niji'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'tfnico/vim-gradle'
 Plugin 'tristen/vim-sparkup'
 Plugin 'othree/yajs.vim'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 
 " All of your Plugins must be added before the following line
@@ -102,7 +100,10 @@ endif
 let g:neocomplete#force_omni_input_patterns.java = '\%(\h\w*\|)\)\.\w*'
 
 " ctrlp
-set wildignore+=*.class
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$'
+  \ }
 
 " easymotion
 map <Space> <Plug>(easymotion-prefix)
@@ -112,70 +113,8 @@ set updatetime=200
 let g:tagbar_autoshowtag=1
 nmap <F8> :TagbarToggle<CR>
 
-" tagbar-coffee
-let g:tagbar_type_coffee = {
-    \ 'ctagstype' : 'coffee',
-    \ 'kinds'     : [
-        \ 'c:classes',
-        \ 'm:methods',
-        \ 'f:functions',
-        \ 'v:variables',
-        \ 'f:fields',
-    \ ]
-\ }
-
-" tagbar-haskell
-let g:tagbar_type_haskell = {
-    \ 'ctagsbin'  : 'hasktags',
-    \ 'ctagsargs' : '-x -c -o-',
-    \ 'kinds'     : [
-        \  'm:modules:0:1',
-        \  'd:data: 0:1',
-        \  'd_gadt: data gadt:0:1',
-        \  't:type names:0:1',
-        \  'nt:new types:0:1',
-        \  'c:classes:0:1',
-        \  'cons:constructors:1:1',
-        \  'c_gadt:constructor gadt:1:1',
-        \  'c_a:constructor accessors:1:1',
-        \  'ft:function types:1:1',
-        \  'fi:function implementations:0:1',
-        \  'o:others:0:1'
-    \ ],
-    \ 'sro'        : '.',
-    \ 'kind2scope' : {
-        \ 'm' : 'module',
-        \ 'c' : 'class',
-        \ 'd' : 'data',
-        \ 't' : 'type'
-    \ },
-    \ 'scope2kind' : {
-        \ 'module' : 'm',
-        \ 'class'  : 'c',
-        \ 'data'   : 'd',
-        \ 'type'   : 't'
-    \ }
-\ }
-
-" tagbar-scala
-let g:tagbar_type_scala = {
-    \ 'ctagstype' : 'Scala',
-    \ 'kinds'     : [
-        \ 'p:packages:1',
-        \ 'V:values',
-        \ 'v:variables',
-        \ 'T:types',
-        \ 't:traits',
-        \ 'o:objects',
-        \ 'a:aclasses',
-        \ 'c:classes',
-        \ 'r:cclasses',
-        \ 'm:methods'
-    \ ]
-\ }
-
 " sparkup
 let g:sparkupNextMapping='<C-l>'
 let g:sparkupDoubleQuote=1
 
-" vi: se ts=4 sw=4:
+" vi: se et ts=2 sw=2:
