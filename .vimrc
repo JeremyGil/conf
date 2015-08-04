@@ -1,6 +1,8 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+set rtp+=/usr/local/share/lilypond/2.18.2/vim/
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -40,6 +42,7 @@ Plugin 'tfnico/vim-gradle'
 Plugin 'tristen/vim-sparkup'
 Plugin 'othree/yajs.vim'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
