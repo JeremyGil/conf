@@ -44,7 +44,7 @@ Plugin 'tristen/vim-sparkup'
 Plugin 'othree/yajs.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
-Plugin 'bilalq/lite-dfm'
+Plugin 'junegunn/goyo.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -122,7 +122,7 @@ nmap <F8> :TagbarToggle<CR>
 let g:sparkupNextMapping='<C-l>'
 let g:sparkupDoubleQuote=1
 
-" lite-dfm
-nnoremap <Leader>z :LiteDFMToggle<CR>
+" goyo
+nnoremap <Leader>z :Goyo<CR>
 
 " vi: se et ts=2 sw=2:
