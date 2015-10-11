@@ -18,6 +18,7 @@ Plugin 'bufkill.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
+Plugin 'editorconfig/editorconfig-vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Shougo/neocomplete.vim'
@@ -43,6 +44,7 @@ Plugin 'tristen/vim-sparkup'
 Plugin 'othree/yajs.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'bilalq/lite-dfm'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -119,5 +121,8 @@ nmap <F8> :TagbarToggle<CR>
 " sparkup
 let g:sparkupNextMapping='<C-l>'
 let g:sparkupDoubleQuote=1
+
+" lite-dfm
+nnoremap <Leader>z :LiteDFMToggle<CR>
 
 " vi: se et ts=2 sw=2:
