@@ -34,7 +34,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-leiningen'
+Plugin 'tpope/vim-salve'
 Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
@@ -124,5 +124,8 @@ let g:sparkupDoubleQuote=1
 
 " goyo
 nnoremap <Leader>z :Goyo<CR>
+
+" clojure-static
+let g:clojure_align_subforms = 1
 
 " vi: se et ts=2 sw=2:
