@@ -97,13 +97,6 @@ nmap <F7> :NERDTreeToggle<CR>
 
 let g:neocomplete#enable_at_startup = 1
 
-" eclim
-let g:EclimCompletionMethod = 'omnifunc'
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
-endif
-let g:neocomplete#force_omni_input_patterns.java = '\%(\h\w*\|)\)\.\w*'
-
 " ctrlp
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
