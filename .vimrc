@@ -96,6 +96,8 @@ let g:nerdtree_tabs_open_on_console_startup=0
 nmap <F7> :NERDTreeToggle<CR>
 
 let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_auto_close_preview = 1
+se completeopt-=preview
 
 " ctrlp
 let g:ctrlp_custom_ignore = {
