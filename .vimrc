@@ -19,6 +19,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'Chiel92/vim-autoformat'
 Plugin 'Yggdroot/indentLine'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Shougo/neocomplete.vim'
@@ -84,6 +85,9 @@ set laststatus=2
 
 let mapleader=','
 let maplocalleader=','
+
+" autoformat
+nmap <leader>a :Autoformat<CR>
 
 " powerline
 set rtp+=$PIP_REPO/powerline/bindings/vim
