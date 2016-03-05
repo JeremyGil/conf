@@ -88,6 +88,7 @@ let maplocalleader=','
 
 " autoformat
 nmap <leader>a :Autoformat<CR>
+let g:autoformat_autoindent=0
 
 " powerline
 set rtp+=$PIP_REPO/powerline/bindings/vim
@@ -99,11 +100,11 @@ nmap <F9> :Gstatus<CR>
 let g:nerdtree_tabs_open_on_console_startup=0
 nmap <F7> :NERDTreeToggle<CR>
 
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_auto_close_preview = 1
+let g:neocomplete#enable_at_startup=1
+let g:neocomplete#enable_auto_close_preview=1
 
 " ctrlp
-let g:ctrlp_custom_ignore = {
+let g:ctrlp_custom_ignore={
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ 'file': '\v\.(exe|so|dll)$'
   \ }
@@ -124,6 +125,6 @@ let g:sparkupDoubleQuote=1
 nnoremap <Leader>z :Goyo<CR>
 
 " clojure-static
-let g:clojure_align_subforms = 1
+let g:clojure_align_subforms=1
 
 " vi: se et ts=2 sw=2:
