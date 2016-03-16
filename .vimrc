@@ -36,10 +36,12 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-salve'
+Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-sexp'
 Plugin 'guns/vim-clojure-static'
 Plugin 'guns/vim-clojure-highlight'
-Plugin 'bhurlow/vim-parinfer'
+"Plugin 'bhurlow/vim-parinfer'
+Plugin 'venantius/vim-cljfmt'
 Plugin 'vim-niji'
 Plugin 'tfnico/vim-gradle'
 Plugin 'tristen/vim-sparkup'
@@ -88,7 +90,7 @@ let mapleader=','
 let maplocalleader=','
 
 " autoformat
-nmap <leader>a :Autoformat<CR>
+nmap <Leader>a :Autoformat<CR>
 let g:autoformat_autoindent=0
 
 " powerline
@@ -118,14 +120,17 @@ set updatetime=200
 let g:tagbar_autoshowtag=1
 nmap <F8> :TagbarToggle<CR>
 
+" clojure-static
+let g:clojure_align_subforms=1
+
+" cljfmt
+let g:clj_fmt_autosave=0
+
 " sparkup
 let g:sparkupNextMapping='<C-l>'
 let g:sparkupDoubleQuote=1
 
 " goyo
 nnoremap <Leader>z :Goyo<CR>
-
-" clojure-static
-let g:clojure_align_subforms=1
 
 " vi: se et ts=2 sw=2:
