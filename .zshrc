@@ -45,7 +45,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(atom brew brew-cask gem git heroku lein meteor node npm pip rbenv thefuck themes tmux vagrant z)
+plugins=(atom brew brew-cask gem git heroku lein meteor node npm pip rbenv themes tmux vagrant z)
 
 source $ZSH/oh-my-zsh.sh
 
