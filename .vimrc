@@ -1,91 +1,49 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
 
 set rtp+=/usr/local/share/lilypond/2.18.2/vim/
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'tomasr/molokai'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'Shougo/neocomplete.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'Chiel92/vim-autoformat'
+Plug 'Yggdroot/indentLine'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-projectionist'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-salve'
+Plug 'tpope/vim-classpath'
+Plug 'guns/vim-sexp'
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-highlight'
+Plug 'bhurlow/vim-parinfer'
+Plug 'venantius/vim-cljfmt'
+Plug 'vim-niji'
+Plug 'tristen/vim-sparkup'
+Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'LaTeX-Box-Team/LaTeX-Box'
+call plug#end()
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-Plugin 'bufkill.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'Yggdroot/indentLine'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'tomasr/molokai'
-Plugin 'easymotion/vim-easymotion'
-Plugin 'mhinz/vim-signify'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-sexp-mappings-for-regular-people'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-projectionist'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-salve'
-Plugin 'tpope/vim-classpath'
-Plugin 'guns/vim-sexp'
-Plugin 'guns/vim-clojure-static'
-Plugin 'guns/vim-clojure-highlight'
-Plugin 'bhurlow/vim-parinfer'
-Plugin 'venantius/vim-cljfmt'
-Plugin 'vim-niji'
-Plugin 'tfnico/vim-gradle'
-Plugin 'tristen/vim-sparkup'
-Plugin 'othree/yajs.vim'
-Plugin 'mxw/vim-jsx'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'LaTeX-Box-Team/LaTeX-Box'
-Plugin 'junegunn/goyo.vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-" filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-filetype plugin on
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install (update) plugins
-" :PluginSearch(!) foo - search (or refresh cache first) for foo
-" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 colo molokai
-set enc=utf-8
 let $LANG='en'
-
-set guifont=InputMono:h12
-set guioptions-=m guioptions-=T
-
 set number
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set autoindent
-
 set list
 set listchars=tab:»\ ,trail:-
 
 set hlsearch
-set incsearch
-
-syntax on
-set laststatus=2
 
 let mapleader=','
 let maplocalleader=','
@@ -97,24 +55,20 @@ let g:autoformat_autoindent=0
 " powerline
 set rtp+=$PIP_REPO/powerline/bindings/vim
 
+" easymotion
+map <Space> <Plug>(easymotion-prefix)
+
 " fugitive
 nmap <F9> :Gstatus<CR>
 
-" NERDTree
-let g:nerdtree_tabs_open_on_console_startup=0
-nmap <F7> :NERDTreeToggle<CR>
+" fzf
+nmap <C-P> :FZF<CR>
 
 let g:neocomplete#enable_at_startup=1
 let g:neocomplete#enable_auto_close_preview=1
 
-" ctrlp
-let g:ctrlp_custom_ignore={
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$'
-  \ }
-
-" easymotion
-map <Space> <Plug>(easymotion-prefix)
+" NERDTree
+nmap <F7> :NERDTreeToggle<CR>
 
 " tagbar
 set updatetime=200
@@ -130,8 +84,5 @@ let g:clj_fmt_autosave=0
 " sparkup
 let g:sparkupNextMapping='<C-l>'
 let g:sparkupDoubleQuote=1
-
-" goyo
-nnoremap <Leader>z :Goyo<CR>
 
 " vi: se et ts=2 sw=2:
