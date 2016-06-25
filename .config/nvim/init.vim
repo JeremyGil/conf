@@ -15,13 +15,20 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
+Plug 'Chiel92/vim-autoformat'
+Plug 'neovim/node-host'
+Plug 'snoe/nvim-parinfer.js'
 call plug#end()
 
+colo molokai
 let $LANG='en'
 set number
 set list
 set listchars=tab:»\ ,trail:-
-colo molokai
+
+let mapleader=','
+let maplocalleader=','
 
 " airline
 let g:airline_powerline_fonts = 1
@@ -42,3 +49,7 @@ let g:deoplete#enable_at_startup = 1
 
 " NERDTree
 nmap <F7> :NERDTreeToggle<CR>
+
+" autoformat
+nmap <Leader>a :Autoformat<CR>
+let g:autoformat_autoindent=0
