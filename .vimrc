@@ -14,8 +14,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
-Plug 'Yggdroot/indentLine'
-Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -28,12 +26,6 @@ Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
 Plug 'bhurlow/vim-parinfer'
-Plug 'venantius/vim-cljfmt'
-Plug 'vim-niji'
-Plug 'tristen/vim-sparkup'
-Plug 'othree/yajs.vim'
-Plug 'mxw/vim-jsx'
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 call plug#end()
 
@@ -47,10 +39,6 @@ set hlsearch
 
 let mapleader=','
 let maplocalleader=','
-
-" autoformat
-nmap <Leader>a :Autoformat<CR>
-let g:autoformat_autoindent=0
 
 " powerline
 set rtp+=$PIP_REPO/powerline/bindings/vim
@@ -70,19 +58,11 @@ let g:neocomplete#enable_auto_close_preview=1
 " NERDTree
 nmap <F7> :NERDTreeToggle<CR>
 
-" tagbar
-set updatetime=200
-let g:tagbar_autoshowtag=1
-nmap <F8> :TagbarToggle<CR>
+" autoformat
+nmap <Leader>a :Autoformat<CR>
+let g:autoformat_autoindent=0
 
 " clojure-static
 let g:clojure_align_subforms=1
-
-" cljfmt
-let g:clj_fmt_autosave=0
-
-" sparkup
-let g:sparkupNextMapping='<C-l>'
-let g:sparkupDoubleQuote=1
 
 " vi: se et ts=2 sw=2:
