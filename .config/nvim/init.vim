@@ -21,6 +21,8 @@ Plug 'neovim/node-host'
 Plug 'snoe/nvim-parinfer.js'
 call plug#end()
 
+au BufNewFile,BufRead *.boot set filetype=clojure
+
 colo molokai
 let $LANG='en'
 set number
@@ -33,7 +35,6 @@ let maplocalleader=','
 " airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme='powerlineish'
-let g:airline#extensions#tabline#enabled = 1
 
 " easymotion
 map <Space> <Plug>(easymotion-prefix)
