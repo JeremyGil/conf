@@ -18,10 +18,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-projectionist'
-Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fireplace'
-Plug 'tpope/vim-salve'
-Plug 'tpope/vim-classpath'
 Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
@@ -50,6 +47,7 @@ map <Space> <Plug>(easymotion-prefix)
 nmap <F9> :Gstatus<CR>
 
 " fzf
+let $FZF_DEFAULT_COMMAND = 'pt -g ""'
 nmap <C-P> :FZF<CR>
 
 let g:neocomplete#enable_at_startup=1

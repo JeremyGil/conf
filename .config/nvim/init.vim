@@ -19,6 +19,9 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
 Plug 'neovim/node-host'
 Plug 'snoe/nvim-parinfer.js'
+Plug 'tpope/vim-fireplace'
+Plug 'guns/vim-clojure-static'
+Plug 'guns/vim-clojure-highlight'
 call plug#end()
 
 au BufNewFile,BufRead *.boot set filetype=clojure
@@ -43,6 +46,7 @@ map <Space> <Plug>(easymotion-prefix)
 nmap <F9> :Gstatus<CR>
 
 " fzf
+let $FZF_DEFAULT_COMMAND = 'pt -g ""'
 nmap <C-P> :FZF<CR>
 
 " deoplete
