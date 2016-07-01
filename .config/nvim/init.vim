@@ -17,6 +17,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'Chiel92/vim-autoformat'
+Plug 'tpope/vim-surround'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'neovim/node-host'
 Plug 'snoe/nvim-parinfer.js'
 Plug 'tpope/vim-fireplace'
@@ -57,4 +60,7 @@ nmap <F7> :NERDTreeToggle<CR>
 
 " autoformat
 nmap <Leader>a :Autoformat<CR>
-let g:autoformat_autoindent=0
+let g:autoformat_autoindent = 0
+
+" nvim-parinfer
+let g:parinfer_airline_integration = 0
