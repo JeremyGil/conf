@@ -1,4 +1,5 @@
 call plug#begin()
+
 Plug 'tpope/vim-sensible'
 Plug 'tomasr/molokai'
 Plug 'vim-airline/vim-airline'
@@ -16,15 +17,32 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
 Plug 'Chiel92/vim-autoformat'
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
-Plug 'guns/vim-sexp'
-Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
+" js
+Plug 'othree/yajs.vim'
+
+" clojure
 Plug 'neovim/node-host'
 Plug 'snoe/nvim-parinfer.js'
-Plug 'tpope/vim-fireplace'
+Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'tpope/vim-fireplace'
+
+" ruby
+Plug 'danchoi/ri.vim'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-rails'
+
+" purescript
+Plug 'raichoo/purescript-vim'
+
 call plug#end()
 
 au BufNewFile,BufRead *.boot set filetype=clojure
@@ -57,6 +75,9 @@ let g:deoplete#enable_at_startup = 1
 
 " NERDTree
 nmap <F7> :NERDTreeToggle<CR>
+
+" tagbar
+nmap <F8> :TagbarToggle<CR>
 
 " autoformat
 nmap <Leader>a :Autoformat<CR>
