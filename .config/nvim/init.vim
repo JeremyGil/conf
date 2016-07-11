@@ -2,32 +2,57 @@ call plug#begin()
 
 Plug 'tpope/vim-sensible'
 Plug 'tomasr/molokai'
+
 Plug 'vim-airline/vim-airline'
+let g:airline_powerline_fonts = 1
+
 Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='powerlineish'
+
 Plug 'easymotion/vim-easymotion'
+map <Space> <Plug>(easymotion-prefix)
+
 Plug 'tpope/vim-fugitive'
+nmap <F9> :Gstatus<CR>
+
 Plug 'mhinz/vim-signify'
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+let $FZF_DEFAULT_COMMAND = 'pt -g ""'
+nmap <C-P> :FZF<CR>
 
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+let g:deoplete#enable_at_startup = 1
 
 Plug 'editorconfig/editorconfig-vim'
+
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+nmap <F7> :NERDTreeToggle<CR>
+
 Plug 'scrooloose/nerdcommenter'
+
 Plug 'majutsushi/tagbar'
+nmap <F8> :TagbarToggle<CR>
+
 Plug 'Chiel92/vim-autoformat'
+nmap <Leader>a :Autoformat<CR>
+let g:autoformat_autoindent = 0
+
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-surround'
 
 " js
 Plug 'othree/yajs.vim'
 
-" clojure
+" parinfer
 Plug 'neovim/node-host'
 Plug 'snoe/nvim-parinfer.js'
+let g:parinfer_airline_integration = 0
+
+" clojure
 Plug 'guns/vim-sexp'
 Plug 'guns/vim-clojure-static'
 Plug 'guns/vim-clojure-highlight'
@@ -42,6 +67,7 @@ Plug 'tpope/vim-rails'
 
 " purescript
 Plug 'raichoo/purescript-vim'
+Plug 'FrigoEU/psc-ide-vim'
 
 call plug#end()
 
@@ -55,33 +81,3 @@ set listchars=tab:»\ ,trail:-
 
 let mapleader=','
 let maplocalleader=','
-
-" airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
-
-" easymotion
-map <Space> <Plug>(easymotion-prefix)
-
-" fugitive
-nmap <F9> :Gstatus<CR>
-
-" fzf
-let $FZF_DEFAULT_COMMAND = 'pt -g ""'
-nmap <C-P> :FZF<CR>
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-
-" NERDTree
-nmap <F7> :NERDTreeToggle<CR>
-
-" tagbar
-nmap <F8> :TagbarToggle<CR>
-
-" autoformat
-nmap <Leader>a :Autoformat<CR>
-let g:autoformat_autoindent = 0
-
-" nvim-parinfer
-let g:parinfer_airline_integration = 0
