@@ -84,6 +84,9 @@ au BufNewFile,BufRead *.boot set filetype=clojure
 
 colo molokai
 let $LANG='en'
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set number
 set list
 set listchars=tab:»\ ,trail:-
