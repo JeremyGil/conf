@@ -1,7 +1,5 @@
 set nocompatible
 
-set rtp+=/usr/local/share/lilypond/2.18.2/vim/
-
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tomasr/molokai'
@@ -13,6 +11,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
 Plug 'Chiel92/vim-autoformat'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'tpope/vim-repeat'
