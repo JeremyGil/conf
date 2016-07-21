@@ -1,3 +1,6 @@
+let mapleader=','
+let maplocalleader=','
+
 call plug#begin()
 
 Plug 'tpope/vim-sensible'
@@ -47,6 +50,8 @@ Plug 'tpope/vim-surround'
 
 " js
 Plug 'othree/yajs.vim'
+Plug 'mxw/vim-jsx'
+let g:jsx_ext_required = 0
 
 " parinfer
 Plug 'neovim/node-host'
@@ -91,6 +96,3 @@ set expandtab
 set number
 set list
 set listchars=tab:»\ ,trail:-
-
-let mapleader=','
-let maplocalleader=','
