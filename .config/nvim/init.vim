@@ -1,6 +1,3 @@
-let mapleader=','
-let maplocalleader=','
-
 call plug#begin()
 
 Plug 'tpope/vim-sensible'
@@ -50,8 +47,6 @@ Plug 'tpope/vim-surround'
 
 " js
 Plug 'othree/yajs.vim'
-Plug 'mxw/vim-jsx'
-let g:jsx_ext_required = 0
 
 " parinfer
 Plug 'neovim/node-host'
@@ -71,6 +66,9 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-rails'
 
+" coffeescript
+Plug 'kchmck/vim-coffee-script'
+
 " purescript
 Plug 'raichoo/purescript-vim'
 Plug 'FrigoEU/psc-ide-vim'
@@ -84,6 +82,9 @@ au FileType purescript nmap <leader>c :PSCIDEcaseSplit<CR>
 au FileType purescript nmap <leader>qd :PSCIDEremoveImportQualifications<CR>
 au FileType purescript nmap <leader>qa :PSCIDEaddImportQualifications<CR>
 
+" elm
+Plug 'elmcast/elm-vim'
+
 call plug#end()
 
 au BufNewFile,BufRead *.boot set filetype=clojure
@@ -96,3 +97,6 @@ set expandtab
 set number
 set list
 set listchars=tab:»\ ,trail:-
+
+let mapleader=','
+let maplocalleader=','
