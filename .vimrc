@@ -63,8 +63,10 @@ let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
 let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+Plug 'alx741/vim-hindent'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'eagletmt/ghcmod-vim'
+autocmd BufWritePost *.hs GhcModCheckAndLintAsync
 map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>
 map <silent> tq :GhcModType<CR>
@@ -128,6 +130,27 @@ au FileType purescript nmap <leader>qa :PSCIDEaddImportQualifications<CR>
 Plug 'elmcast/elm-vim'
 Plug 'bitterjug/vim-tagbar-ctags-elm'
 
+" elixir
+Plug 'elixir-lang/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+Plug 'slime-lang/vim-slime-syntax'
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records'
+    \ ]
+\ }
+
 call plug#end()
 
 au BufNewFile,BufRead *.boot set filetype=clojure
@@ -143,6 +166,11 @@ set listchars=tab:»\ ,trail:-
 
 let mapleader=','
 let maplocalleader=','
+
+nnoremap <leader>bp :bp<cr>
+nnoremap <leader>bn :bn<cr>
+nnoremap <leader>bo <c-w>o
+nnoremap <leader>bd :bd<cr>
 
 " fix clipboard w/ macOS Sierra
 set clipboard=unnamed
