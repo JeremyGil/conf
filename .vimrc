@@ -3,6 +3,16 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tomasr/molokai'
 
+Plug 'vim-syntastic/syntastic'
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 Plug 'itchyny/lightline.vim'
 let g:lightline = {
   \   'component': {
@@ -22,8 +32,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 let $FZF_DEFAULT_COMMAND = 'pt -g ""'
 nmap <C-P> :FZF<CR>
 
-Plug 'Shougo/neocomplete.vim'
-let g:neocomplete#enable_at_startup = 1
+Plug 'ervandew/supertab'
 
 Plug 'editorconfig/editorconfig-vim'
 
@@ -106,18 +115,9 @@ let g:tagbar_type_haskell = {
     \ }
 \ }
 
-" ruby
-Plug 'danchoi/ri.vim'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-rails'
-
-" coffeescript
-Plug 'kchmck/vim-coffee-script'
-
 " purescript
 Plug 'raichoo/purescript-vim'
-Plug 'FrigoEU/psc-ide-vim'
+Plug 'frigoeu/psc-ide-vim'
 au FileType purescript nmap <leader>t :PSCIDEtype<CR>
 au FileType purescript nmap <leader>s :PSCIDEapplySuggestion<CR>
 au FileType purescript nmap <leader>a :PSCIDEaddTypeAnnotation<CR>
